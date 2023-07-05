@@ -1,19 +1,13 @@
 job('Assignment1') {
     description('This is my awsome Job')
-
-    parameters {
-        stringParam('Planet', defaultValue = 'world', description = 'This is the world')
-        booleanParam('FLAG', true)
-        choiceParam('OPTION', ['option 1 (default)', 'option 2', 'option 3'])
-    }
     triggers {
         cron('H 5 * * 7')
     }
 
     steps {
         shell("""
-                echo 'Hello World'
-                echo 'Running scripy'
+                bat "javac Hello.java"
+                bat "java Hello"
                 """
         )
     }
