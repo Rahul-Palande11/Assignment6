@@ -1,0 +1,12 @@
+job('Assignment1') {
+  scm {
+    git("https://github.com/Rahul-Palande11/SRE-PATH.git")
+}
+
+steps {
+    shell '''
+          'bat javac Hello.java'
+          'bat java Hello'
+  '''
+  }
+}
