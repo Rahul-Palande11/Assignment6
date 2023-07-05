@@ -5,11 +5,9 @@ job('Assignment1') {
     }
 
     steps {
-        step('Execute Shell') {
-            script("""
-                javac Hello.java
-                java Hello
-            """)
-        }
+        bat """
+            javac Hello.java
+            java Hello
+        """
     }
 }
