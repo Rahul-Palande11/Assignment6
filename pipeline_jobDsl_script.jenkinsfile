@@ -3,7 +3,9 @@ job('Assignment1') {
     triggers {
         cron('H 5 * * 7')
     }
-
+scm {
+        git(''
+}
     steps {
          sh """
              Hello.sh
