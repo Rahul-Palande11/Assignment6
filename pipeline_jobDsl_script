@@ -6,8 +6,8 @@ job('Assignment1') {
 
     steps {
         shell("""
-                bat "javac Hello.java"
-                bat "java Hello"
+                bat 'javac Hello.java'
+                bat 'java Hello'
                 """
         )
     }
