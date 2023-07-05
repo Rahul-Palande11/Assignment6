@@ -1,12 +1,17 @@
 job('Assignment1') {
-  scm {
-    git branch: 'main' , url: 'https://github.com/Rahul-Palande11/SRE-PATH.git'
-}
+    scm {
+        git {
+            branch('main')
+            remote {
+                url('https://github.com/Rahul-Palande11/SRE-PATH.git')
+            }
+        }
+    }
 
-steps {
-    shell '''
-          javac Hello.java
-           java Hello'
-  '''
-  }
+    steps {
+        shell '''
+            javac Hello.java
+            java Hello
+        '''
+    }
 }
