@@ -1,14 +1,15 @@
 job('Assignment1') {
-    description('This is my awsome Job')
+    description('This is my awesome Job')
     triggers {
         cron('H 5 * * 7')
     }
 
     steps {
-        shell("""
-                bat 'javac Hello.java'
-                bat 'java Hello'
-                """
-        )
+        step('Execute Shell') {
+            script("""
+                javac Hello.java
+                java Hello
+            """)
+        }
     }
 }
