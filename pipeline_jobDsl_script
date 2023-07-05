@@ -5,9 +5,9 @@ job('Assignment1') {
     }
 
     steps {
-        bat """
-            javac Hello.java
-            java Hello
+         sh """
+             Hello.sh
+            ./Hello.sh
         """
     }
 }
