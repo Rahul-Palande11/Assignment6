@@ -1,6 +1,6 @@
 job('Assignment1') {
   scm {
-    git("https://github.com/Rahul-Palande11/SRE-PATH.git")
+    git branch: 'main' , url: 'https://github.com/Rahul-Palande11/SRE-PATH.git'
 }
 
 steps {
